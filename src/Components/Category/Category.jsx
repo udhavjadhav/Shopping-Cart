@@ -23,7 +23,7 @@ export default function Category() {
               <img className='img' src={item.image} alt="" />
               <CardContent>
                  <p className='heading'>{item.name}</p> 
-                  <p className='create'>{item.creationAt}</p>
+                  <p className='create'>Top Offers | 70% off</p>
               </CardContent>
               <CardActions className='btn'>
                 <button className='explore' size="small">Explore Now</button>

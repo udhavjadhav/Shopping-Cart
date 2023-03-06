@@ -5,11 +5,12 @@ import CardContent from '@mui/material/CardContent';
 import { CardActionArea, CardActions } from '@mui/material';
 import BottomNav from '../BottomNav/BottomNav';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+
 import './Products.css'
 
 export default function MultiActionAreaCard() {
     const [data, setData] = useState([])
-    
+
     useEffect(() => {
         fetch('https://api.escuelajs.co/api/v1/products')
             .then(res => res.json())
@@ -30,13 +31,14 @@ export default function MultiActionAreaCard() {
                                         <h3 className='title'>
                                             {item.title}
                                         </h3>
-                                        <p className='desc' color="text.secondary">
+                                        {/* <p className='desc' color="text.secondary">
                                             {item.description}
-                                        </p>
+                                        </p> */}
+                                        <p className='offer'>Upto 50% off | Best Offer </p>
 
-                                        <h3 className='price'>
+                                        <p className='price'>
                                             Price: {item.price} $
-                                        </h3>
+                                        </p>
                                     </CardContent>
                                 </CardActionArea>
                                 <CardActions className='btn'>
