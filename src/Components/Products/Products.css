@@ -1,0 +1,154 @@
+.products{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding-bottom: 50px;
+}
+
+.card{
+    padding: 5px;
+    margin: 5px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky; 
+   
+}
+
+.add{
+    background-color: #0d6def; 
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.view{
+    background-color: rgb(197, 2, 2); 
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.img{
+    transition: transform .2s; 
+    height: 300px;
+}
+
+.img:hover{
+    transform: scale(1.5); 
+}
+
+.icon{
+    margin-left: 10px;
+}
+
+.title{
+    font-weight: bolder;
+}
+
+.desc{
+    line-height: 1.5;
+    
+ }
+.fav{
+    float: right;
+    margin-top: 7px;
+    cursor: pointer;
+}
+.fav:hover{
+    color:red;
+}
+
+@media screen and (min-width:1080px) {
+    .products{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .img{
+        height: 300px;
+    }
+    .card{
+        padding: 0;
+        margin: 5px;
+        height: auto;
+    }
+    .desc{
+       font-size: 16px;
+    }
+    .title{
+        font-size: 18px;
+    }
+    .price{
+        font-size: 18px;
+    }
+   
+}
+@media screen and (min-width:480px) and (max-width:1080px) {
+    .products{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .img{
+        height: 200px;
+    }
+    .card{
+        padding: 0;
+        margin: 5px;
+        height: auto;
+    }
+    .desc{
+       font-size: 15px;
+    }
+    .title{
+        font-size: 15px;
+    }
+    .price{
+        font-size: 15px;
+    }
+    .btn{
+        display: block;
+    }
+}
+@media screen and (max-width:480px) {
+    .products{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .img{
+        height: 150px;
+    }
+    .card{
+        padding: 0;
+        margin: 5px;
+        height: auto;
+    }
+    .desc{
+       font-size: 11px;
+    }
+    .title{
+        font-size: 12px;
+    }
+    .price{
+        font-size: 12px;
+    }
+    .btn{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+        font-size: 5px;
+    }
+    .add{
+        font-size:8px;
+        padding: 6px;
+    }
+    .view{
+        font-size: 8px;
+        padding: 6px;
+    }
+}
