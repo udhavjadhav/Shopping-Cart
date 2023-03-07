@@ -1,0 +1,28 @@
+.cards {
+    padding-top: 10px;
+    position: sticky;
+    top: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    /* margin: 5px; */
+}
+
+.carimg {
+    height: 50px;
+    width: 50px;
+}
+
+.text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 11px;
+
+}
