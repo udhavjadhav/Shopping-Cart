@@ -19,14 +19,14 @@ export default function Products() {
       {
         data.map(item => {
           return (
-            <Card key={item.id} onClick={()=>Navigate('/')} className='card' sx={{ maxWidth: 400 }}>
+            <Card key={item.id} onClick={()=>Navigate('/category')} className='card' sx={{ maxWidth: 400 }}>
               <img className='img' src={item.image} alt="" />
               <CardContent>
                  <p className='heading'>{item.name}</p> 
                   <p className='create'>Top Offers | 70% off</p>
               </CardContent>
               <CardActions className='btn'>
-                <button className='explore' size="small">Explore Now</button>
+                <button onClick={()=>Navigate('/')} className='explore' size="small">Explore Now</button>
               </CardActions>
             </Card>
           )

@@ -40,7 +40,7 @@ export default function Account(){
     <>
       <List
         sx={{ width: '100%', bgcolor: 'background.paper', cursor:'pointer' }}
-        subheader={<ListSubheader  sx={{fontWeight:'bolder', fontSize:'18px', mt:2, mb:1}}><ArrowBackIosIcon fontSize='small' onClick={()=>Navigate('/')}/>Settings</ListSubheader>}
+        subheader={<ListSubheader sx={{fontWeight:'bolder', fontSize:'18px', mt:3, mb:1}}><ArrowBackIosIcon fontSize='small' onClick={()=>Navigate('/')}/>Profile</ListSubheader>}
       >
         <ListItem>
           <ListItemIcon>

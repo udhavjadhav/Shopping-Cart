@@ -19,10 +19,6 @@ const responsive = {
     },
 };
 
-const Image = styled('img')`
-    width:100%;
-    height:280px;
-`;
 const BigCarousel = () => {
     return (
         <div className="big
@@ -45,7 +41,7 @@ const BigCarousel = () => {
             >
                 <div><img className="images" src="/assets/car1.jpg" alt="loading" /></div>
                 <div><img className="images" src="/assets/car2.jpg" alt="loading" /></div>
-                <div><img className="images" src="/assets/car3.jpg" alt="loading" /></div>
+                <div><img className="images" src="/assets/car5.jpg" alt="loading" /></div>
                 <div><img className="images" src="/assets/car4.jpg" alt="loading" /></div>
                 
             </Carousel>

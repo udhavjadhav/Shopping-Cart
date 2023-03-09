@@ -1,14 +1,12 @@
 .products{
   display: grid;
   grid-template-columns: auto auto auto auto;
-  padding: 50px 0 50px;
 }
 .btn{
     display: flex;
     justify-content: center;
     align-items: center;
     position: sticky; 
-   
 }
 
 .add{
@@ -81,6 +79,12 @@
     font-weight: bolder;
 }
 
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (min-width:1080px) {
     .products{
         display: grid;
@@ -111,6 +115,7 @@
     .img{
         height: 155px;
     }
+    
     .card{
         height: auto;
     }

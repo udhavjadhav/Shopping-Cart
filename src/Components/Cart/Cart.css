@@ -1,0 +1,11 @@
+.empty{
+    height: 300px;
+    width: 100%;
+}
+.empty-text{
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
