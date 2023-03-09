@@ -7,11 +7,11 @@ import './Carousel.css'
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 10,
+    items: 9.5,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 10,
+    items: 6.5,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -19,10 +19,10 @@ const responsive = {
   },
 };
 
-const Image=styled('img')`
-    width:100%;
-    height:280px;
-`;
+// const Image = styled('img')`
+//     width:100%;
+//     height:280px;
+// `;
 const CarouselComponent = () => {
   return (
     <div className="cards">
@@ -39,6 +39,7 @@ const CarouselComponent = () => {
         transitionDuration={1000}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+        dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
         {

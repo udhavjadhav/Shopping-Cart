@@ -1,18 +1,37 @@
-.products{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  padding-bottom: 50px;
+.main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-bottom: 50px ;
+}
+
+.card{
+    padding: 10px;
+    margin: 10px;
+    
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+.create{
+    display: flex; 
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    font-size: 18px;
+    color: green;
 }
 .btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky; 
-   
 }
 
-.add{
-    background-color: #0d6def; 
+.explore{
+    background-color: rgb(160, 16, 160); 
     color: #fff;
     border: none;
     padding: 8px;
@@ -20,160 +39,71 @@
     text-transform: uppercase;
     cursor: pointer;
 }
-.view{
-    background-color: rgb(197, 2, 2); 
-    color: #fff;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.img{
+.image{
     transition: transform .2s; 
-    height: 300px;
+    cursor: pointer;
 }
 
-.img:hover{
+.image:hover{
     transform: scale(1.2); 
 }
 
-.icon{
-    margin-left: 10px;
-}
-
-.title{
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* 
-.desc{
-    line-height: 1.5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
- } */
-.fav{
-    float: right;
-    margin-top: 7px;
-    cursor: pointer;
-}
-.fav:hover{
-    color:red;
-}
-
-.offer{
-    font-size: 17px;
-    color: green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.price{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bolder;
-}
-
 @media screen and (min-width:1080px) {
-    .products{
+    .main{
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto ;
     }
-    .img{
+    .image{
         height: 300px;
-    }
-    .card{
-        height: auto;
-    }
-    .desc{
-       font-size: 16px;
-    }
-    .title{
-        font-size: 18px;
-    }
-    .price{
-        font-size: 18px;
     }
    
 }
 @media screen and (min-width:480px) and (max-width:1080px) {
-    .products{
+    .main{
         display: grid;
         grid-template-columns: auto auto auto;
     }
-    .img{
-        height: 155px;
+    .image{
+        height: 200px;
     }
     .card{
-        height: auto;
+        padding: 5;
+        margin: 5px;
     }
-    .desc{
-       font-size: 15px;
+    .create{
+        font-size: 12px;
     }
-    .title{
-        font-size: 15px;
+    .explore{
+        padding: 6px;
+        font-size: 12px;
     }
-    .price{
-        font-size: 15px;
+    .heading{
+        font-size: 14px;
     }
-    .btn{
-        display: block;
-    }
-    .add{
-        font-size:9px;
-        padding: 8px;
-    }
-    .view{
-        font-size: 9px;
-        padding: 8px;
-    }
-    .offer{
-        font-size: 15px;
-    }
+    
 }
 @media screen and (max-width:480px) {
-    .products{
+    .main{
         display: grid;
         grid-template-columns: auto auto;
     }
-    .img{
+    .image{
         height: 150px;
     }
     .card{
-        height: auto;
+        padding: 0;
+        margin: 5px;
     }
-    .desc{
-       font-size: 11px;
-    }
-    .title{
+    .create{
         font-size: 12px;
     }
-    .price{
-        font-size: 12px;
-    }
-    .btn{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2px;
-        font-size: 5px;
-    }
-    .add{
-        font-size:7px;
+    .explore{
         padding: 6px;
+        font-size: 10px;
     }
-    .view{
-        font-size: 7px;
-        padding: 6px;
+    .heading{
+        font-size: 14px;
     }
-    .offer{
-        font-size: 11px;
-       
-    }
+    
 }
+

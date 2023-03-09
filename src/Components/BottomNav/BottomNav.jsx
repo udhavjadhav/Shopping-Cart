@@ -19,7 +19,7 @@ const StyledBadge = styled(Badge)(({ theme, value }) => ({
     },
   }));
   
-export default function BottomNav() {
+export default function BottomNav({count}) {
     const [value, setValue] = React.useState('home');
 
     const handleChange = (event, newValue) => {
@@ -46,7 +46,7 @@ export default function BottomNav() {
                 onClick={()=>Navigate('/cart')}
                 label="Cart"
                 value="cart"
-                icon={  <StyledBadge badgeContent={4} color="secondary">
+                icon={  <StyledBadge badgeContent={count} color="secondary">
                 <ShoppingCartIcon />
               </StyledBadge>}
             />

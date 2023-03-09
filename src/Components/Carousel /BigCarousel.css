@@ -11,6 +11,12 @@
 }
 @media screen and (min-width: 480px) and (max-width:1080px){
     .images{
+        height: 300px;
+    }
+    
+}
+@media screen and (max-width: 480px){
+    .images{
         height: 200px;
     }
     

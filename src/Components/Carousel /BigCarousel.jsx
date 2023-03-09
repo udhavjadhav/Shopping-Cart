@@ -43,14 +43,6 @@ const BigCarousel = () => {
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
             >
-                {/* {
-            CarData.map((data) => (
-              <div className="bigcar" key={data.id}>
-                <img className="images" src={data.img} alt="loading" />
-              </div>
-            ))
-            
-        } */}
                 <div><img className="images" src="/assets/car1.jpg" alt="loading" /></div>
                 <div><img className="images" src="/assets/car2.jpg" alt="loading" /></div>
                 <div><img className="images" src="/assets/car3.jpg" alt="loading" /></div>

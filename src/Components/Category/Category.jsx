@@ -1,38 +1,56 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react'
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
+import { CardActionArea, CardActions } from '@mui/material';
 import BottomNav from '../BottomNav/BottomNav';
-import { useNavigate } from 'react-router-dom';
-import './Category.css';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import './Category.css'
+import Navbar from '../Navbar/Navbar';
 
 export default function Category() {
-  const [data, setData] = useState([])
-  const Navigate = useNavigate()
-  useEffect(() => {
-    fetch('https://mocki.io/v1/4b7f5d74-2f5a-48d1-9e5a-f14d731d9e1e')
-      .then(res => res.json())
-      .then(prod => setData(prod))
-  }, [])
-  return (
-    <div className='main'>
-      {
-        data.map(item => {
-          return (
-            <Card key={item.id} onClick={()=>Navigate('/')} className='card' sx={{ maxWidth: 400 }}>
-              <img className='img' src={item.image} alt="" />
-              <CardContent>
-                 <p className='heading'>{item.name}</p> 
-                  <p className='create'>Top Offers | 70% off</p>
-              </CardContent>
-              <CardActions className='btn'>
-                <button className='explore' size="small">Explore Now</button>
-              </CardActions>
-            </Card>
-          )
-        })
-      }
-      <BottomNav />
-    </div>
-  );
+    const [data, setData] = useState([])
+    const [count, setCount] = useState(0);
+    useEffect(() => {
+        fetch('https://api.escuelajs.co/api/v1/products')
+            .then(res => res.json())
+            .then(prod => setData(prod))
+    }, [])
+
+    return (
+        <>
+            <Navbar/>
+        <div className='products'>
+            {
+                data.map(item => {
+                    return (
+                        <>
+                            <Card key={item.id} className='card' sx={{ maxWidth: 400 }}>
+                                <CardActionArea>
+                                    <img className='img' src={item.images[0]} alt="" />
+                                    <CardContent className='content'>
+                                        <FavoriteIcon className='fav' />
+                                        <h3 className='title'>
+                                            {item.title}
+                                        </h3>
+                                        <p className='offer'>Upto 50% off | Best Offer </p>
+                                        <p className='price'>
+                                            Price: {item.price} $
+                                        </p>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions className='btn'>
+                                    <button onClick={() => setCount(count+1)} className='add'>Add To Cart</button>
+                                    <button className='view'>View Product</button>
+                                </CardActions>
+                            </Card>
+                        </>
+                    )
+                })
+            }
+            <BottomNav count = {count}/>
+        </div>
+        </>
+    );
 }
+

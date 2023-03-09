@@ -1,10 +1,9 @@
 .home{
-    padding-bottom: 50px;
+    padding-top: 50px;
 }
-.search{
-    background-color: rgb(225, 255, 255);
-}
+
 .deliver{
+    background-color: rgb(219, 238, 245);
     display: flex;
     align-items: center;
     padding: 3px;
