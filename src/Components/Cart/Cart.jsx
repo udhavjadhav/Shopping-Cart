@@ -43,7 +43,7 @@ function Summary({ }) {
   // }
   return (
     <>
-      <div>
+      <div className='empty-cart'>
         <img className='empty' src="./assets/empty.webp" alt="" srcset="" />
         <p className='empty-text'>Your Bag is Empty !</p>
       </div>

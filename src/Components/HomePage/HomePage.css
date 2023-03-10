@@ -1,15 +1,18 @@
 .home{
-    padding-top: 45px;
+    /* padding-top: 45px; */
+    padding-bottom: 50px ;
 }
 .spin{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 10px;
+
 }
 
 .deliver{
-    background-color: rgb(246, 251, 252);
+    /* background-color: rgb(246, 251, 252); */
+    background-color: #f1f1f1;
     display: flex;
     align-items: center;
     padding: 5px 0 5px 0;
@@ -44,3 +47,37 @@
     font-size: 11px;
     color: green;
 }
+
+.video {
+    position:  absolute;
+  }
+  
+  .video-text  {
+      /* background: #000 none repeat scroll 0 0; */
+      color: #fff;
+      font-weight: bolder;
+      mix-blend-mode: overlay;
+      padding: 5px 5px;
+  }
+
+.video-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media screen and (min-width:1080px) {
+    .video{
+        width: 99%;
+    }
+}
+@media screen and (min-width:480px) and (max-width:768px) {
+    .video{
+        width: 97.7%;
+        height: auto;
+    }
+}
+@media screen and (max-width:480px) {
+    .video{
+        width: 95.5%;
+        height: auto;
+    }
+}
+

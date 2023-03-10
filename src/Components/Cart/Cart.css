@@ -1,11 +1,15 @@
-.empty{
-    height: 300px;
-    width: 100%;
-}
-.empty-text{
-    font-size: 25px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.empty-cart{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.empty{
+    width: 350px;
+   
+}
+.empty-text{
+    font-size: 25px;
+    font-family:Helvetica Neue, Helvetica,Arial,sans-serif ;
+   
 }

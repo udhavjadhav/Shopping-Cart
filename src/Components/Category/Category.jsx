@@ -9,6 +9,10 @@ import './Category.css'
 import Navbar from '../Navbar/Navbar';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import PropTypes from 'prop-types';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Skeleton from '@mui/material/Skeleton';
 
 export default function Category() {
     const [data, setData] = useState([])

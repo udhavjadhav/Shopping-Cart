@@ -13,11 +13,10 @@ import Box from '@mui/material/Box';
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
+    const [isPlay, setIsPlay] = useState(true)
     useEffect(() => {
         setTimeout(() => { setLoading(false) }, 1500)
     }, [])
-
-
 
     return (
         <>
@@ -35,7 +34,11 @@ const HomePage = () => {
                             <p className='text1'> Deliver to Pune - 411012</p>
                         </div>
                         <CarouselComponent />
-                        <BigCarousel />
+                        {/* <BigCarousel /> */}
+                        <div className='track'>
+                            <video className='video' src="/assets/video.mp4" autoPlay muted loop></video>
+                            <h4 className='video-text'>AJIO</h4>
+                        </div>
                         <Products />
                     </div>
 
