@@ -9,6 +9,8 @@ import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import './BottomNav.css';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 
 const StyledBadge = styled(Badge)(({ theme, value }) => ({
     '& .MuiBadge-badge': {
@@ -40,16 +42,21 @@ export default function BottomNav({count}) {
                 onClick={()=>Navigate('/category')}
                 label="Categories"
                 value="categories"
-                icon={<CategoryIcon />}
+                icon={<StorefrontIcon/>}
             />
             <BottomNavigationAction
                 onClick={()=>Navigate('/cart')}
                 label="Cart"
                 value="cart"
                 icon={  <StyledBadge badgeContent={count} color="secondary">
-                <ShoppingCartIcon />
+                <ShoppingBagOutlinedIcon />
               </StyledBadge>}
             />
+            {/* <BottomNavigationAction
+                label="Wishlist"
+                value="wishlist"
+                icon={<FavoriteOutlined />}
+            /> */}
             <BottomNavigationAction
                 onClick={()=>Navigate('/account')}
                 label="Profile"

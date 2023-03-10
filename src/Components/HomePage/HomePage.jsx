@@ -30,7 +30,7 @@ const HomePage = () => {
                     :
                     <div className='home'>
                         <div className='deliver'>
-                            <LocationOnOutlinedIcon />
+                            <LocationOnOutlinedIcon sx={{ml:2}}/>
                             <p className='text1'> Deliver to Pune - 411012</p>
                         </div>
                         <CarouselComponent />

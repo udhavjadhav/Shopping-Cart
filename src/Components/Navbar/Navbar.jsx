@@ -30,14 +30,12 @@ const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
+
   marginLeft: 0,
   width: '50%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(1),
-    width: '50%',
+    width: '30%',
   },
 }));
 
@@ -166,7 +164,7 @@ export default function Navbar() {
 
   return (
     <Box sx={{ flexGrow: 1, position: 'sticky', top: 0, left: 0, right: 0, zIndex: 1, width: '100%' }}>
-      <AppBar position="static">
+      <AppBar style={{backgroundColor:'#f3f4f7', borderRadius:'10px'}} position="static">
         <Toolbar>
           <div>
             {[''].map((anchor) => (
@@ -174,7 +172,7 @@ export default function Navbar() {
                 <IconButton onClick={toggleDrawer(anchor, true)}
                   size="large"
                   edge="start"
-                  color="inherit"
+                  color="black"
                   aria-label="open drawer"
                   sx={{ mr: 2 }}
                 >
@@ -194,17 +192,18 @@ export default function Navbar() {
 
           <Typography
             variant="h6"
+            color='black'
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}
           >
             AJIO
           </Typography>
-          <Search>
+          <Search sx={{backgroundColor:'#fff', borderRadius:'10px'}}>
             <SearchIconWrapper>
-              <SearchIcon />
+              <SearchIcon sx={{color:'black'}} />
             </SearchIconWrapper>
-            <StyledInputBase
+            <StyledInputBase sx={{color:'black'}}
               placeholder="Search..."
               inputProps={{ 'aria-label': 'search' }}
             />
