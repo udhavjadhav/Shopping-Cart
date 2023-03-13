@@ -25,6 +25,7 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import FaceRetouchingNaturalIcon from '@mui/icons-material/FaceRetouchingNatural';
 import CheckroomIcon from '@mui/icons-material/Checkroom';
 import { useNavigate } from 'react-router-dom';
+import { CarData } from '../CarData';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -160,7 +161,6 @@ export default function Navbar() {
       </Box>
     </Box>
   );
-
 
   return (
     <Box sx={{ flexGrow: 1, position: 'sticky', top: 0, left: 0, right: 0, zIndex: 1, width: '100%' }}>

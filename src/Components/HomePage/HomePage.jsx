@@ -1,19 +1,16 @@
 import React, { useContext, useState, useEffect } from 'react'
 import BottomNav from '../BottomNav/BottomNav'
-import SearchBar from 'material-ui-search-bar';
-import { CarData } from '../CarData'
 import './HomePage.css'
 import CarouselComponent from '../Carousel /CarouselComponent';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import BigCarousel from '../Carousel /BigCarousel';
 import Navbar from '../Navbar/Navbar';
 import Products from '../Products/Products';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import Footer from '../Footer/Footer';
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
-    const [isPlay, setIsPlay] = useState(true)
     useEffect(() => {
         setTimeout(() => { setLoading(false) }, 1500)
     }, [])
@@ -40,6 +37,7 @@ const HomePage = () => {
                             <h4 className='video-text'>AJIO</h4>
                         </div>
                         <Products />
+                        <Footer/>
                     </div>
 
             }

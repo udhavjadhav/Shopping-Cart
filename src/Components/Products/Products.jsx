@@ -25,9 +25,9 @@ export default function Products() {
                  <p className='heading'>{item.name}</p> 
                   <p className='create'>Top Offers | 70% off</p>
               </CardContent>
-              <CardActions className='btn'>
+              {/* <CardActions className='btn'>
                 <button onClick={()=>Navigate('/')} className='explore' size="small">Explore Now</button>
-              </CardActions>
+              </CardActions> */}
             </Card>
           )
         })
