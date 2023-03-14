@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react'
+import React, {useState, useEffect} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea, CardActions } from '@mui/material';
@@ -9,6 +9,8 @@ import './Category.css'
 import Navbar from '../Navbar/Navbar';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+
+// export const AppContext = createContext();
 
 export default function Category() {
     const [data, setData] = useState([])
@@ -56,7 +58,7 @@ export default function Category() {
                                             </CardActionArea>
                                             <CardActions className='btn'>
                                                 <button onClick={() => setCount(count + 1)} className='add'>Add To Cart</button>
-                                                <button className='view'>View Product</button>
+                                                <button onClick={() => setCount(count - 1)} className='view'>Remove from cart</button>
                                             </CardActions>
                                         </Card>
                                     </>
@@ -65,7 +67,7 @@ export default function Category() {
                         }
                     </div>
             }
-            <BottomNav count={count} />
+            <BottomNav count={count}/>
         </>
     );
 }

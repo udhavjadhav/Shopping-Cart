@@ -59,7 +59,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      width: '12ch',
+      width: '50ch',
     },
   },
 }));
@@ -91,7 +91,7 @@ export default function Navbar() {
         AJIO
       </Typography>
       <Divider />
-      <List onClick={() => Navigate('/category')} style={{ fontFamily: 'Helvetica Neue”,Helvetica,Arial,sans-serif '}}>
+      <List onClick={() => Navigate('/category')} style={{ fontFamily: 'Helvetica Neue”,Helvetica,Arial,sans-serif ', cursor:'pointer'}}>
         <ListItem>
           <ListItemIcon>
             < MaleIcon />

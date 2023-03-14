@@ -1,10 +1,8 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
-import CategoryIcon from '@mui/icons-material/Category';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
@@ -22,7 +20,9 @@ const StyledBadge = styled(Badge)(({ theme, value }) => ({
   }));
   
 export default function BottomNav({count}) {
-    const [value, setValue] = React.useState('home');
+    // const {user, setUser} = useContext(AppContext)
+
+    const [value, setValue] = useState('home');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -52,11 +52,6 @@ export default function BottomNav({count}) {
                 <ShoppingBagOutlinedIcon />
               </StyledBadge>}
             />
-            {/* <BottomNavigationAction
-                label="Wishlist"
-                value="wishlist"
-                icon={<FavoriteOutlined />}
-            /> */}
             <BottomNavigationAction
                 onClick={()=>Navigate('/account')}
                 label="Profile"

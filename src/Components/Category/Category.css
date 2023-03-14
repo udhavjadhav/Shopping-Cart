@@ -89,7 +89,7 @@
 @media screen and (min-width:1080px) {
     .products{
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 25% 25% 25% 25%;
     }
     .img{
         height: 300px;
@@ -106,15 +106,23 @@
     .price{
         font-size: 18px;
     }
-   
+    .add{
+        font-size:10px;
+        padding: 8px;
+    }
+    .view{
+        font-size: 10px;
+        padding: 8px;
+    }
 }
 @media screen and (min-width:480px) and (max-width:1080px) {
     .products{
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 33.33% 33.33% 33.33%;
     }
     .img{
         height: 155px;
+        width: 300px;
     }
     
     .card{
@@ -133,11 +141,11 @@
         display: block;
     }
     .add{
-        font-size:9px;
+        font-size:8px;
         padding: 8px;
     }
     .view{
-        font-size: 9px;
+        font-size: 8px;
         padding: 8px;
     }
     .offer{
@@ -147,7 +155,7 @@
 @media screen and (max-width:480px) {
     .products{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: 50% 50%;
     }
     .img{
         height: 150px;
@@ -171,11 +179,11 @@
         font-size: 5px;
     }
     .add{
-        font-size:7px;
+        font-size:6px;
         padding: 6px;
     }
     .view{
-        font-size: 7px;
+        font-size: 6px;
         padding: 6px;
     }
     .offer{
